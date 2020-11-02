@@ -130,16 +130,12 @@ public class AplicacionController {
             escribirArchivo.close();
 
             Stage stage = new Stage();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(
-                    "../resources/dialogoAplicacion.fxml"));
-            BorderPane borderPane = loader.load();
-            dialogoAplicacionController controller =
-                    loader.getController();
-            controller.mostrarMensaje("Archivo creado correctamente");
-            Scene scene = new Scene(borderPane);
+            Parent fxml = FXMLLoader.load(getClass().getResource(
+                    "/resources/dialogoAplicacion.fxml"));
+            Scene scene = new Scene(fxml);
+            scene.getStylesheets().add("/stylesheets/style.css");
             stage.setScene(scene);
             stage.setResizable(false);
-            stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         }catch(Exception e){
             System.out.println(e);

@@ -18,5 +18,5 @@
 
 end
 ; fin del codigo
- ; fin de codigo otra vez xD
+; fin de codigo otra vez xD
 	 	 	 	

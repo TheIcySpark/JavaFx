@@ -11,8 +11,8 @@ public class dialogoAplicacionController {
 
     public Label mensaje;
 
-    public void mostrarMensaje(String m){
-        mensaje.setText(m);
+    public void initialize(){
+        mensaje.setText("Archivo procesado correctamente");
     }
 
     public void onClickAceptar(MouseEvent mouseEvent) {
