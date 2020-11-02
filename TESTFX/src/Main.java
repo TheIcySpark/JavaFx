@@ -19,7 +19,10 @@ public class Main extends Application {
 
         Parent fxml = FXMLLoader.load(getClass().getResource("resources/aplicacion.fxml"));
         stagePrincipal.setTitle("Aplicacion");
-        stagePrincipal.setScene(new Scene(fxml) );
+        Scene scene = new Scene(fxml);
+        scene.getStylesheets().add("stylesheets/style.css");
+        stagePrincipal.setScene(scene);
+        stagePrincipal.setResizable(false);
         stagePrincipal.show();
     }
 

@@ -11,6 +11,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.control.TextField;
 
@@ -137,6 +138,8 @@ public class AplicacionController {
             controller.mostrarMensaje("Archivo creado correctamente");
             Scene scene = new Scene(borderPane);
             stage.setScene(scene);
+            stage.setResizable(false);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.show();
         }catch(Exception e){
             System.out.println(e);
