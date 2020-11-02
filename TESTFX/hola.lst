@@ -1,0 +1,13 @@
+000000 .model small
+000001 .stack
+000010 .data
+000011 	v1 db "hola mundo ico 23 $"
+000100 .code
+000101 	mov ax,@data
+000110 	mov ds, ax
+000111 	mov ah,09h
+001000 	mov dx, offset v1  
+001001 	int 21h
+001010 	mov ah,4ch
+001011 	int 21h
+001100 end
