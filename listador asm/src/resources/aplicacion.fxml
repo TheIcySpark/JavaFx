@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AplicacionController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Archivo: " />
+                  <TextField fx:id="rutaArchivo" editable="false" prefHeight="26.0" prefWidth="361.0" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onClickSeleccionarArchivo" text="Seleccionar Archivo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Formato: " />
+                  <ChoiceBox fx:id="formato" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="eliminarLineasSinCodigo" mnemonicParsing="false" selected="true" text="Eliminar lineas sin codigo" />
+                  <HBox prefHeight="95.0" prefWidth="41.0" />
+                  <Label text="Ceros a la izquierda: " />
+                  <TextField fx:id="cerosIzquierda" text="6" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="142.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Directorio: " />
+                  <TextField fx:id="rutaDirectorio" editable="false" prefHeight="26.0" prefWidth="341.0" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onClickDirectorioSeleccionado" text="Seleccionar Directorio" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Nombre De Archivo: " />
+                  <TextField fx:id="nombreArchivo" />
+                  <ChoiceBox fx:id="extension" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <BorderPane prefHeight="77.0" prefWidth="580.0">
+               <center>
+                  <Button mnemonicParsing="false" onMouseClicked="#onClickProcesarArchivo" text="Procesar Archivo" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

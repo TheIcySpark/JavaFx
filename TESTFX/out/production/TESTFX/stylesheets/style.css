@@ -1,7 +1,0 @@
-.root {
-    -fx-base: #ececec;
-    -fx-background: derive(-fx-base,26.4%);
-    -fx-control-inner-background: derive(-fx-base,80%);
-    -fx-control-inner-background-alt: derive(-fx-control-inner-background,-2%);
-    -fx-base: rgba(60, 63, 65, 255); // dark
-}
